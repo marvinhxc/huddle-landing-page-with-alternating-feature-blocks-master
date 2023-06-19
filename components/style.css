@@ -1,0 +1,336 @@
+:root {
+  --pink: hsl(322, 100%, 66%);
+  --pink-hover: hsl(322, 55%, 76%);
+  --very-pale-cyan: hsl(193, 100%, 96%);
+  --very-dark-cyan: hsl(192, 100%, 9%);
+  --grayish-blue: hsl(208, 11%, 55%);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap");
+/*font-family: 'Open Sans', sans-serif;*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+body {
+  min-width: 375px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+/* ------------------HEADER SECTION----------------------- */
+header {
+  background-image: url(/images/bg-hero-mobile.svg);
+  background-size: cover;
+  background-color: var(--very-pale-cyan);
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.5em;
+  margin-bottom: 2.5em;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.nav-btn {
+  padding: 0.3em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  width: 50%;
+  justify-self: right;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  font-size: 0.8rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+  color: black;
+}
+
+.header-logo {
+  width: 65%;
+}
+
+.header-content {
+  display: grid;
+  text-align: center;
+  padding: 2em;
+}
+
+.header-btn button {
+  font-size: 0.8rem;
+  padding: 1em;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: var(--pink);
+  margin: 2.5em 0;
+  cursor: pointer;
+}
+
+.header-btn button:hover {
+  background-color: var(--pink-hover);
+}
+
+/* ------------------ END OF HEADER SECTION----------------------- */
+
+/*------------------CONTENT SECTION---------------------------- */
+section {
+  text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  padding: 2em;
+  margin: 2em;
+}
+h2 {
+  font-size: 1rem;
+  margin: 1.5em 0;
+}
+
+section p {
+  color: var(--grayish-blue);
+  font-size: 0.9rem;
+}
+
+.promo {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 2em;
+  text-align: center;
+  background-color: white;
+  max-width: 100%;
+  transform: translateY(100px);
+}
+
+button {
+  font-size: 0.8rem;
+  padding: 1em;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: var(--pink);
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--pink-hover);
+}
+
+/*------------------ END OF CONTENT SECTION----------------------- */
+
+/*------------------ FOOTER SECTION ----------------------- */
+
+footer {
+  background-color: var(--very-dark-cyan);
+  color: white;
+  padding: 7em 2em;
+}
+a {
+  color: white;
+  font-size: 0.8rem;
+}
+.footer-logo {
+  width: 50%;
+  margin-bottom: 2em;
+  filter: brightness(0) invert(1);
+}
+
+.information {
+  display: flex;
+  margin-bottom: 1em;
+  text-align: left;
+  gap: 1em;
+  width: 100%;
+}
+
+.about-us,
+.contact-us {
+  margin-top: 3em;
+}
+.social-media {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.social-media i {
+  color: white;
+  margin-left: 0.3em;
+}
+
+.social-media i:hover {
+  color: hsl(322, 100%, 66%);
+  cursor: pointer;
+}
+.copyright {
+  font-size: 0.7rem;
+  color: white;
+  text-align: center;
+}
+
+/*------------------ END OF FOOTER SECTION----------------------- */
+
+/*------------------ RESPONSIVE SECTION----------------------- */
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: 2rem;
+  }
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 0.7em;
+  }
+
+  button {
+    text-align: center;
+  }
+  .header-btn button {
+    width: 70%;
+    text-align: center;
+  }
+  article {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  section h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .promo {
+    transform: translateY(120px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-logo {
+    width: 45%;
+  }
+  .nav-btn {
+    width: 40%;
+  }
+
+  h1 {
+    font-size: 2.9rem;
+  }
+
+  header span {
+    display: block;
+  }
+  section p {
+    font-size: 1.2rem;
+  }
+
+  .header-btn button {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1280px) {
+  header {
+    background-image: url(/images/bg-hero-desktop.svg);
+    background-size: cover;
+  }
+
+  .header-logo {
+    width: 30%;
+  }
+  .nav-btn {
+    width: 25%;
+  }
+
+  .header-content {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1em;
+  }
+  .header-btn {
+    text-align: left;
+  }
+
+  h1,
+  p {
+    text-align: left;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2em;
+    text-align: left;
+    padding: 5em;
+  }
+  section span {
+    display: block;
+  }
+  section h2 {
+    font-size: 2.9rem;
+  }
+
+  .grow-together img,
+  .your-user img {
+    order: 2;
+  }
+  article {
+    width: 50%;
+  }
+  .promo {
+    transform: translateY(100px);
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 5em;
+  }
+  footer p,
+  a {
+    font-size: 1rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  li {
+    margin-bottom: 1.5em;
+  }
+  .copyright {
+    margin-top: 7em;
+  }
+}
+
+@media (min-width: 1536px) {
+  header {
+    padding: 3em;
+  }
+
+  section {
+    margin: 5em;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  article {
+    max-width: 30%;
+  }
+}
